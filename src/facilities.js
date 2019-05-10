@@ -1,4 +1,4 @@
-{
+const data  ={
   "entities": [
     {
       "name": "Broomsticks PTY",
@@ -35,3 +35,4 @@
       }
   ]
 }
+export default data;
