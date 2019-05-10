@@ -4,7 +4,7 @@ const FacilityEntity = ({entity}) => {
     console.log(entity)
   return (
     <div>
-     {entity.name}
+     {entity.name}, {entity.id},Facility limit: {entity.limit},
     </div>
   )
 }
