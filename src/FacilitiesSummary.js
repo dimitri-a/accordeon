@@ -15,7 +15,7 @@ export default class FacilitiesSummary extends Component {
     return (
       <div>
         {results.map(e => (
-          <FacilityEntity entity={e} />
+          <FacilityEntity entity={e}  />
         ))}
       </div>
     );
