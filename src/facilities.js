@@ -10,21 +10,24 @@ const data = {
           account: "032654 987465",
           existing: true,
           modified: "04/12/2018",
-          entityType: "personal"
+          entityType: "personal",
+          limit:100000
         },
         {
           type: "Credt card",
           account: "032654 987465",
           existing: false,
           modified: "04/12/2018",
-          entityType: "business"
+          entityType: "business",
+          limit:200000
         },
         {
           type: "Credt card",
           account: "032654 987465",
           existing: false,
           modified: "04/12/2018",
-          entityType: "mixed"
+          entityType: "mixed",
+          limit:10000
         },
         {
           type: "Credt card",
