@@ -4,27 +4,39 @@ import data from "./facilities";
 
 export default class FacilitiesSummary extends Component {
   componentDidMount() {
-
-    console.log('data',data)
+    console.log("data", data);
   }
 
-sortData(entities){
-  return entities.sort(function(a, b){
-    if(a.name < b.name) { return -1; }
-    if(a.name > b.name) { return 1; }
-    return 0;
-})
-}
-  
+  sortData(entities) {
+    debugger
+    var order = {
+      entityType: { personal: 1, business: 2 }
+    };
+
+    entities.map(ent => ent.facilities.sort((a, b) => order.entityType[a.entityType] - order.entityType[b.entityType]);
+    
+    
+    
+
+    // return entities.sort(function(a, b) {
+    //   if (a.name < b.name) {
+    //     return -1;
+    //   }
+    //   if (a.name > b.name) {
+    //     return 1;
+    //   }
+    //   return 0;
+    // });
+  }
 
   render() {
+  
     let results = this.sortData(data.entities);
-    debugger
-    console.log(results)
+    console.log("hier", results);
     return (
       <div>
         {results.map(e => (
-          <FacilityEntity entity={e}  />
+          <FacilityEntity entity={e} />
         ))}
       </div>
     );
