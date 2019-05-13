@@ -35,10 +35,26 @@ const data = {
         }
       ]
     },
+
     {
-      name: "Mr John Doe -3409865, Mrs Jane Doe -34098365",
+      name: "Mr John Doe -3409865, Mrs Jane Doe -34098365 bus",
       id: 34098365,
       entityType: "business",
+      facilities: [
+        {
+          type: "Overdraft",
+          account: "032654 987465",
+          existing: false,
+          limit: 10000,
+          modified: "04/12/2018"
+        }
+      ]
+    },
+
+    {
+      name: "Mr John Doe -3409865, Mrs Jane Doe -34098365 mix",
+      id: 34098365,
+      entityType: "mixed",
       facilities: [
         {
           type: "Overdraft",

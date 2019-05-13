@@ -8,18 +8,21 @@ export default class FacilitiesSummary extends Component {
   }
 
   sortData(entities) {
-    debugger;
-    var order = {
-      entityType: { personal: 2, business: 1 }
+    let order = {
+      entityType: { personal: 1, business: 2, mixed: 3 }
     };
 
-    return entities.map(ent =>
-      entities.sort(
-        (a, b) =>
-          a.name - b.name ||
-          order.entityType[a.facilities.entityType] - order.entityType[b.facilities.entityType]
-      )
-    );
+    let limitOrder = entities.map(e => {
+      e.facilities.sort((a, b) => b.limit - a.limit);
+      return e;
+    });
+
+    return limitOrder.sort((a, b) => {
+      return (
+        a.name.localeCompare(b.name) ||
+        order.entityType[a.entityType] - order.entityType[b.entityType]
+      );
+    });
   }
 
   render() {
